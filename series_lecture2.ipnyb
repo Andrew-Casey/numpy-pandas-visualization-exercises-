@@ -1,0 +1,614 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "99f85571",
+   "metadata": {},
+   "source": [
+    "Series Part II"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "8c42f2e8",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import numpy as np\n",
+    "import pandas as pd\n",
+    "from pydataset import data"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "388a1ac9",
+   "metadata": {
+    "scrolled": true
+   },
+   "outputs": [],
+   "source": [
+    "my_df = data('sleepstudy')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "24b23826",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "d9ff2206",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "s2= my_df.Reaction"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "e13b4094",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1    249.5600\n",
+       "2    258.7047\n",
+       "3    250.8006\n",
+       "4    321.4398\n",
+       "5    356.8519\n",
+       "Name: Reaction, dtype: float64"
+      ]
+     },
+     "execution_count": 8,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "s2.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "5ef6fa2d",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "cc9ff7ca",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "249.56"
+      ]
+     },
+     "execution_count": 9,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "s2[1]\n",
+    "my_df['Reaction'][1]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "5d51c443",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "249.56"
+      ]
+     },
+     "execution_count": 10,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "my_df.Reaction[1]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "62872177",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "NameError",
+     "evalue": "name 'q3' is not defined",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+      "\u001b[0;32m/var/folders/lp/pxhhvyv90vx8hwbv8yjldhj80000gn/T/ipykernel_2330/1100591708.py\u001b[0m in \u001b[0;36m<module>\u001b[0;34m\u001b[0m\n\u001b[0;32m----> 1\u001b[0;31m \u001b[0ms2\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mapply\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;32mlambda\u001b[0m \u001b[0mn\u001b[0m\u001b[0;34m:\u001b[0m \u001b[0;34m'q4'\u001b[0m \u001b[0;32mif\u001b[0m \u001b[0mn\u001b[0m \u001b[0;34m>\u001b[0m \u001b[0mq3\u001b[0m \u001b[0;32melse\u001b[0m \u001b[0;34m'q1-q3'\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+      "\u001b[0;32m/usr/local/anaconda3/lib/python3.9/site-packages/pandas/core/series.py\u001b[0m in \u001b[0;36mapply\u001b[0;34m(self, func, convert_dtype, args, **kwargs)\u001b[0m\n\u001b[1;32m   4431\u001b[0m         \u001b[0mdtype\u001b[0m\u001b[0;34m:\u001b[0m \u001b[0mfloat64\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   4432\u001b[0m         \"\"\"\n\u001b[0;32m-> 4433\u001b[0;31m         \u001b[0;32mreturn\u001b[0m \u001b[0mSeriesApply\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mself\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mfunc\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mconvert_dtype\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0margs\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mkwargs\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mapply\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m   4434\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   4435\u001b[0m     def _reduce(\n",
+      "\u001b[0;32m/usr/local/anaconda3/lib/python3.9/site-packages/pandas/core/apply.py\u001b[0m in \u001b[0;36mapply\u001b[0;34m(self)\u001b[0m\n\u001b[1;32m   1086\u001b[0m             \u001b[0;32mreturn\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mapply_str\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1087\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m-> 1088\u001b[0;31m         \u001b[0;32mreturn\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mapply_standard\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m   1089\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1090\u001b[0m     \u001b[0;32mdef\u001b[0m \u001b[0magg\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mself\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+      "\u001b[0;32m/usr/local/anaconda3/lib/python3.9/site-packages/pandas/core/apply.py\u001b[0m in \u001b[0;36mapply_standard\u001b[0;34m(self)\u001b[0m\n\u001b[1;32m   1141\u001b[0m                 \u001b[0;31m# List[Union[Callable[..., Any], str]]]]]\"; expected\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1142\u001b[0m                 \u001b[0;31m# \"Callable[[Any], Any]\"\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m-> 1143\u001b[0;31m                 mapped = lib.map_infer(\n\u001b[0m\u001b[1;32m   1144\u001b[0m                     \u001b[0mvalues\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1145\u001b[0m                     \u001b[0mf\u001b[0m\u001b[0;34m,\u001b[0m  \u001b[0;31m# type: ignore[arg-type]\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+      "\u001b[0;32m/usr/local/anaconda3/lib/python3.9/site-packages/pandas/_libs/lib.pyx\u001b[0m in \u001b[0;36mpandas._libs.lib.map_infer\u001b[0;34m()\u001b[0m\n",
+      "\u001b[0;32m/var/folders/lp/pxhhvyv90vx8hwbv8yjldhj80000gn/T/ipykernel_2330/1100591708.py\u001b[0m in \u001b[0;36m<lambda>\u001b[0;34m(n)\u001b[0m\n\u001b[0;32m----> 1\u001b[0;31m \u001b[0ms2\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mapply\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;32mlambda\u001b[0m \u001b[0mn\u001b[0m\u001b[0;34m:\u001b[0m \u001b[0;34m'q4'\u001b[0m \u001b[0;32mif\u001b[0m \u001b[0mn\u001b[0m \u001b[0;34m>\u001b[0m \u001b[0mq3\u001b[0m \u001b[0;32melse\u001b[0m \u001b[0;34m'q1-q3'\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+      "\u001b[0;31mNameError\u001b[0m: name 'q3' is not defined"
+     ]
+    }
+   ],
+   "source": [
+    "s2.apply(lambda n: 'q4' if n > q3 else 'q1-q3')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "id": "b49634db",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "ds_team_series = pd.Series (['Adam', 'Adam', 'Andrew', 'Carina', 'John', 'John', \n",
+    "                            'Madeleine', 'Misty', 'Margaret', 'Ryan', 'Tasha'])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "1d0950ec",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "0      True\n",
+       "1      True\n",
+       "2      True\n",
+       "3     False\n",
+       "4     False\n",
+       "5     False\n",
+       "6     False\n",
+       "7     False\n",
+       "8     False\n",
+       "9     False\n",
+       "10    False\n",
+       "dtype: bool"
+      ]
+     },
+     "execution_count": 13,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "ds_team_series.str.startswith('A')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "id": "42bf40a0",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "0      Adam\n",
+       "1      Adam\n",
+       "2    Andrew\n",
+       "dtype: object"
+      ]
+     },
+     "execution_count": 14,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "ds_team_series[ds_team_series.str.startswith('A')]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "7df8decf",
+   "metadata": {},
+   "source": [
+    "# numerical to categorical values - binning and cutting"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "76302dfd",
+   "metadata": {},
+   "source": [
+    "cut() put numerical values into discrete bins"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "id": "4ae7d64e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "s2_minutes = s2/60"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "id": "89c10c7d",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1      4.159333\n",
+       "2      4.311745\n",
+       "3      4.180010\n",
+       "4      5.357330\n",
+       "5      5.947532\n",
+       "         ...   \n",
+       "176    5.493460\n",
+       "177    5.574697\n",
+       "178    5.720332\n",
+       "179    6.152362\n",
+       "180    6.068727\n",
+       "Name: Reaction, Length: 180, dtype: float64"
+      ]
+     },
+     "execution_count": 17,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "s2_minutes"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "id": "231e77d6",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "s2_bins = pd.cut(s2_minutes, 4)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "id": "5ed7a628",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1      (3.234, 4.372]\n",
+       "2      (3.234, 4.372]\n",
+       "3      (3.234, 4.372]\n",
+       "4      (4.372, 5.506]\n",
+       "5      (5.506, 6.639]\n",
+       "            ...      \n",
+       "176    (4.372, 5.506]\n",
+       "177    (5.506, 6.639]\n",
+       "178    (5.506, 6.639]\n",
+       "179    (5.506, 6.639]\n",
+       "180    (5.506, 6.639]\n",
+       "Name: Reaction, Length: 180, dtype: category\n",
+       "Categories (4, interval[float64, right]): [(3.234, 4.372] < (4.372, 5.506] < (5.506, 6.639] < (6.639, 7.773]]"
+      ]
+     },
+     "execution_count": 20,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "s2_bins"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "id": "24a7ae7d",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "(4.372, 5.506]    75\n",
+       "(3.234, 4.372]    53\n",
+       "(5.506, 6.639]    44\n",
+       "(6.639, 7.773]     8\n",
+       "Name: Reaction, dtype: int64"
+      ]
+     },
+     "execution_count": 21,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "s2_bins.value_counts()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "id": "488cce1a",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1      (4.146, 5.052]\n",
+       "2      (4.146, 5.052]\n",
+       "3      (4.146, 5.052]\n",
+       "4      (5.052, 5.959]\n",
+       "5      (5.052, 5.959]\n",
+       "            ...      \n",
+       "176    (5.052, 5.959]\n",
+       "177    (5.052, 5.959]\n",
+       "178    (5.052, 5.959]\n",
+       "179    (5.959, 6.866]\n",
+       "180    (5.959, 6.866]\n",
+       "Name: Reaction, Length: 180, dtype: category\n",
+       "Categories (5, interval[float64, right]): [(3.234, 4.146] < (4.146, 5.052] < (5.052, 5.959] < (5.959, 6.866] < (6.866, 7.773]]"
+      ]
+     },
+     "execution_count": 23,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "s2_bins_5 = pd.cut(s2_minutes, 5)\n",
+    "s2_bins_5"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "id": "8a7ffc04",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1      (4, 5]\n",
+       "2      (4, 5]\n",
+       "3      (4, 5]\n",
+       "4      (5, 6]\n",
+       "5      (5, 6]\n",
+       "        ...  \n",
+       "176    (5, 6]\n",
+       "177    (5, 6]\n",
+       "178    (5, 6]\n",
+       "179    (6, 7]\n",
+       "180    (6, 7]\n",
+       "Name: Reaction, Length: 180, dtype: category\n",
+       "Categories (5, interval[int64, right]): [(3, 4] < (4, 5] < (5, 6] < (6, 7] < (7, 8]]"
+      ]
+     },
+     "execution_count": 25,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "s2_bins2 = pd.cut(s2_minutes, [3,4,5,6,7,8])\n",
+    "s2_bins2"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "id": "0ac2f520",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "(4, 5]    74\n",
+       "(5, 6]    51\n",
+       "(3, 4]    28\n",
+       "(6, 7]    22\n",
+       "(7, 8]     5\n",
+       "Name: Reaction, dtype: int64"
+      ]
+     },
+     "execution_count": 26,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "s2_bins2.value_counts()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 27,
+   "id": "e7ed844d",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import matplotlib.pyplot as plt"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 30,
+   "id": "56169bb5",
+   "metadata": {
+    "scrolled": false
+   },
+   "outputs": [
+    {
+     "data": {
+      "image/png": "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xW1jxoyp3EDD3FlnnTVgfenSpXH22WfHZZddVqGJKIW3XTiqefPmxZVXXhmf/OQnKz3KsLdjx45oaWmJ9vb2+PznPx+vvPJKpUcalh599NGYOHFiXHvttdHQ0BAf/ehH48EHH6z0WETEkSNH4mc/+1ncdNNNvpC0SogPBlmzZk386U9/iq6urkqPMuxNmjQpVq1aFRs2bIgHH3wwent7Y+rUqbF3795KjzbsvPLKK7FixYoYO3ZsbNiwIW699db42te+FqtWrar0aMPeI488Evv374+5c+dWehTeI59wygA9PT0xceLEeOKJJ+KCCy6IiIhp06bFhRdeGMuWLavscMShQ4fi7LPPjoULF8aCBQsqPc6wMmLEiJg4cWJs2bKluO1rX/tadHd3x9NPP13ByfjUpz4VI0aMiN/85jeVHoX3yJUPBti2bVv09fXFRRddFDU1NVFTUxObN2+OH/zgB1FTUzPgBi/SO+200+L888+PHTt2VHqUYae5uTnOPffcAdvOOeec2L17d4UmIiLi73//ezz55JNx8803V3oUSuCGUwb4xCc+Edu3bx+w7Utf+lJ85CMfiW984xt+06LC8vl8vPjii3HppZdWepRh55JLLomXXnppwLa//vWvvjCzwlauXBkNDQ1x5ZVXVnoUSiA+GKC2tjbGjx8/YNtpp50WZ5xxxqDtDL0777wzZs2aFR/84Aejr68v7r333sjlcjFnzpxKjzbsfP3rX4+pU6fGkiVL4nOf+1z88Y9/jAceeCAeeOCBSo82bL355puxcuXKmDNnTtTU+HFWTbxacAL7xz/+EV/4whfitddei7POOismT54cW7du9X/bFXDxxRfHww8/HIsWLYpvf/vb0d7eHsuWLYsbbrih0qMNW08++WTs3r07brrppkqPQonccAoAJOWGUwAgKfEBACQlPgCApMQHAJCU+AAAkhIfAEBS4gMASEp8AABJiQ8AICnxAQAkJT4AgKTEBwCQ1P8DS6xtPtem1UUAAAAASUVORK5CYII=\n",
+      "text/plain": [
+       "<Figure size 640x480 with 1 Axes>"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    }
+   ],
+   "source": [
+    "plt.hist(s2_minutes)\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 37,
+   "id": "d1c9acbf",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "s2_bins = pd.cut(s2_minutes, 10)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 38,
+   "id": "4bb2f1db",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "s2_bins_value_counts = s2_bins.value_counts(sort = False)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 39,
+   "id": "5acdb248",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1      (4.146, 4.599]\n",
+       "2      (4.146, 4.599]\n",
+       "3      (4.146, 4.599]\n",
+       "4      (5.052, 5.506]\n",
+       "5      (5.506, 5.959]\n",
+       "            ...      \n",
+       "176    (5.052, 5.506]\n",
+       "177    (5.506, 5.959]\n",
+       "178    (5.506, 5.959]\n",
+       "179    (5.959, 6.412]\n",
+       "180    (5.959, 6.412]\n",
+       "Name: Reaction, Length: 180, dtype: category\n",
+       "Categories (10, interval[float64, right]): [(3.234, 3.692] < (3.692, 4.146] < (4.146, 4.599] < (4.599, 5.052] ... (5.959, 6.412] < (6.412, 6.866] < (6.866, 7.319] < (7.319, 7.773]]"
+      ]
+     },
+     "execution_count": 39,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "s2_bins"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 41,
+   "id": "76bd92d2",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "(3.234, 3.692]    10\n",
+       "(3.692, 4.146]    25\n",
+       "(4.146, 4.599]    34\n",
+       "(4.599, 5.052]    36\n",
+       "(5.052, 5.506]    23\n",
+       "(5.506, 5.959]    25\n",
+       "(5.959, 6.412]    15\n",
+       "(6.412, 6.866]     5\n",
+       "(6.866, 7.319]     3\n",
+       "(7.319, 7.773]     4\n",
+       "Name: Reaction, dtype: int64"
+      ]
+     },
+     "execution_count": 41,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "s2_bins_value_counts"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "927d43d2",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# count the occurrences of each unique value and get the top 6\n",
+    "top_letters = letters.value_counts().head(6)\n",
+    "\n",
+    "# create a bar plot of the top 6 letters\n",
+    "top_letters.plot.bar()\n",
+    "\n",
+    "# add labels and title\n",
+    "plt.xlabel(\"Letter\")\n",
+    "plt.ylabel(\"Frequency\")\n",
+    "plt.title(\"Most Commonly Occurring Letters\")\n",
+    "\n",
+    "# show the plot\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "6ef455e3",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.13"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
