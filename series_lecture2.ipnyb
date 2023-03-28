@@ -2,7 +2,7 @@
  "cells": [
   {
    "cell_type": "markdown",
-   "id": "99f85571",
+   "id": "0ede8b95",
    "metadata": {},
    "source": [
     "Series Part II"
@@ -11,7 +11,7 @@
   {
    "cell_type": "code",
    "execution_count": 4,
-   "id": "8c42f2e8",
+   "id": "d7adafc0",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -23,7 +23,7 @@
   {
    "cell_type": "code",
    "execution_count": 6,
-   "id": "388a1ac9",
+   "id": "b630d791",
    "metadata": {
     "scrolled": true
    },
@@ -35,7 +35,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "24b23826",
+   "id": "ecc7191e",
    "metadata": {},
    "outputs": [],
    "source": []
@@ -43,7 +43,7 @@
   {
    "cell_type": "code",
    "execution_count": 7,
-   "id": "d9ff2206",
+   "id": "c23452d2",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -53,7 +53,7 @@
   {
    "cell_type": "code",
    "execution_count": 8,
-   "id": "e13b4094",
+   "id": "20d9cd5b",
    "metadata": {},
    "outputs": [
     {
@@ -79,7 +79,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "5ef6fa2d",
+   "id": "93aaebce",
    "metadata": {},
    "outputs": [],
    "source": []
@@ -87,7 +87,7 @@
   {
    "cell_type": "code",
    "execution_count": 9,
-   "id": "cc9ff7ca",
+   "id": "963b4cfc",
    "metadata": {},
    "outputs": [
     {
@@ -109,7 +109,7 @@
   {
    "cell_type": "code",
    "execution_count": 10,
-   "id": "5d51c443",
+   "id": "84409999",
    "metadata": {},
    "outputs": [
     {
@@ -130,7 +130,7 @@
   {
    "cell_type": "code",
    "execution_count": 11,
-   "id": "62872177",
+   "id": "82ba6fd1",
    "metadata": {},
    "outputs": [
     {
@@ -157,7 +157,7 @@
   {
    "cell_type": "code",
    "execution_count": 12,
-   "id": "b49634db",
+   "id": "b37a7a56",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -168,7 +168,7 @@
   {
    "cell_type": "code",
    "execution_count": 13,
-   "id": "1d0950ec",
+   "id": "0a5a49c7",
    "metadata": {},
    "outputs": [
     {
@@ -200,7 +200,7 @@
   {
    "cell_type": "code",
    "execution_count": 14,
-   "id": "42bf40a0",
+   "id": "da5b2158",
    "metadata": {},
    "outputs": [
     {
@@ -223,7 +223,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "7df8decf",
+   "id": "8901564d",
    "metadata": {},
    "source": [
     "# numerical to categorical values - binning and cutting"
@@ -231,7 +231,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "76302dfd",
+   "id": "acc86fac",
    "metadata": {},
    "source": [
     "cut() put numerical values into discrete bins"
@@ -240,7 +240,7 @@
   {
    "cell_type": "code",
    "execution_count": 16,
-   "id": "4ae7d64e",
+   "id": "ab59d5f1",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -250,7 +250,7 @@
   {
    "cell_type": "code",
    "execution_count": 17,
-   "id": "89c10c7d",
+   "id": "0130ec2c",
    "metadata": {},
    "outputs": [
     {
@@ -282,7 +282,7 @@
   {
    "cell_type": "code",
    "execution_count": 19,
-   "id": "231e77d6",
+   "id": "82a52340",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -292,7 +292,7 @@
   {
    "cell_type": "code",
    "execution_count": 20,
-   "id": "5ed7a628",
+   "id": "893b189c",
    "metadata": {},
    "outputs": [
     {
@@ -325,7 +325,7 @@
   {
    "cell_type": "code",
    "execution_count": 21,
-   "id": "24a7ae7d",
+   "id": "a23a344b",
    "metadata": {},
    "outputs": [
     {
@@ -350,7 +350,7 @@
   {
    "cell_type": "code",
    "execution_count": 23,
-   "id": "488cce1a",
+   "id": "d151e0ca",
    "metadata": {},
    "outputs": [
     {
@@ -384,7 +384,7 @@
   {
    "cell_type": "code",
    "execution_count": 25,
-   "id": "8a7ffc04",
+   "id": "edbdad6b",
    "metadata": {},
    "outputs": [
     {
@@ -418,7 +418,7 @@
   {
    "cell_type": "code",
    "execution_count": 26,
-   "id": "0ac2f520",
+   "id": "35bc3d17",
    "metadata": {},
    "outputs": [
     {
@@ -444,7 +444,7 @@
   {
    "cell_type": "code",
    "execution_count": 27,
-   "id": "e7ed844d",
+   "id": "5c593634",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -454,7 +454,7 @@
   {
    "cell_type": "code",
    "execution_count": 30,
-   "id": "56169bb5",
+   "id": "63d3eacb",
    "metadata": {
     "scrolled": false
    },
@@ -478,7 +478,7 @@
   {
    "cell_type": "code",
    "execution_count": 37,
-   "id": "d1c9acbf",
+   "id": "a22ea7c1",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -488,7 +488,7 @@
   {
    "cell_type": "code",
    "execution_count": 38,
-   "id": "4bb2f1db",
+   "id": "63dc60ab",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -498,7 +498,7 @@
   {
    "cell_type": "code",
    "execution_count": 39,
-   "id": "5acdb248",
+   "id": "842e19b5",
    "metadata": {},
    "outputs": [
     {
@@ -531,7 +531,7 @@
   {
    "cell_type": "code",
    "execution_count": 41,
-   "id": "76bd92d2",
+   "id": "bc9b7b6a",
    "metadata": {},
    "outputs": [
     {
@@ -562,7 +562,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "927d43d2",
+   "id": "944e0a4e",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -584,7 +584,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "6ef455e3",
+   "id": "a4b709a7",
    "metadata": {},
    "outputs": [],
    "source": []
